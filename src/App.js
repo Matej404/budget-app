@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useBudgets } from "./contexts/BudgetsContext";
 import AddExpenseModal from "./components/AddExpenseModal";
 import UncategorizedBudgetCard from "./components/UncategorizedBudgetCard";
+import TotalBudgetCard from "./components/TotalBudgetCard";
 
 function App() {
   const [showAddBudgetModal, setShowAddBudgetModal] = useState(false);
@@ -45,7 +46,8 @@ function App() {
                           onAddExpenseClick={() => openAddExpenseModal(budget.id)} />
             )
           })}
-          <UncategorizedBudgetCard />
+          <UncategorizedBudgetCard onAddExpenseClick={openAddExpenseModal} />
+          <TotalBudgetCard />
         </div>
         
       </Container>
