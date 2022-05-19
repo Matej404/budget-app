@@ -56,4 +56,5 @@ export default function AddExpenseModal({ show, handleClose, defaultBudgetId }) 
             </Form>
         </Modal>
     )
-}
+} 
+
